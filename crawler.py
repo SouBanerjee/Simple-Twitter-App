@@ -24,10 +24,10 @@ if __name__ == "__main__":
     #To get these tokens, you have to go 'https://apps.twitter.com/' and you have to create a developers account
     #then create an app and on success you will get these tokens
 
-    consumer_key = 'NTJKy8YDvNir3OV3m3CwUzoga'
-    consumer_secret = 'YQRDChl05j0xJ9Cj5qIx2CRoYpkc3V4kXe89m5fMYYIaeSriK0'
-    access_token = '1047452071597940736-DT3EAQbXXUDMTLUcLAU7mQCSkitvik'
-    access_token_secret = 'AwvcmBfWvfs4X3SwIyc7oXEAYvV89nPTD7Hbvg7CiS42N'
+    consumer_key = 'XXXX'
+    consumer_secret = 'XXXX'
+    access_token = 'XXXX'
+    access_token_secret = 'XXXX'
 
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret) #authenticating
     auth.set_access_token(access_token, access_token_secret) #setting accession key
