@@ -1,6 +1,6 @@
 import tweepy
 import json
-
+#It may possible that the number of retrieve tweets is less than the number of tweet ids given to retrieve
 #this function will be used to extract tweets from twitter using tweet ids
 #here, api points to tweepy module
 def lookup_tweets(tweet_IDs, api):
@@ -35,12 +35,12 @@ if __name__ == "__main__":
     #initializing api with time limits constraints
     api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
-    with open('NepalQuake-training-20K-tweetids.txt', 'r') as f:
+    with open(input('File name containing the tweet ids : '), 'r') as f:
         tweet_ids = f.read().strip().split('\n')
 
     results = lookup_tweets(tweet_ids, api) #calling the crawler
 
-    with open('training.json', 'w') as f:
+    with open(input('Output file name to store crawled tweets : '), 'w') as f:
         for x in results:
             for data in x:
                 f.writelines(json.dumps(data._json) + '\n') 
